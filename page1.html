@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autumn Fashion 2024 - Trends</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -73,6 +74,14 @@
         <!-- Back to Top Link -->
         <a href="#top" id="back-to-top">Back to Top</a>
     </main>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            if (link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    </script>
 
 </body>
 
