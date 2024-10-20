@@ -2,15 +2,14 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static files (CSS, JS, images, etc.) from the 'public' folder
+// Serve static files from the public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Route to serve HTML files
+// Set up routes
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/pages/index.html'));
 });
 
-// Route for other pages like algo_solution
 app.get('/algo_solution', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/pages/algo_solution.html'));
 });
